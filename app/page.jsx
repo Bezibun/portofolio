@@ -99,7 +99,7 @@ export default function Home() {
       <section id="projects" className="py-20 bg-gray-100">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold">My Projects</h2>
-        <p className="text-gray-600 mt-2">Beberapa proyek yang telah saya buat.</p>
+        <p className="text-gray-600 mt-2">Some projects I have created.</p>
       </div>
 
       <div className="container mx-auto grid md:grid-cols-3 gap-8 px-6">
