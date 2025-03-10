@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar";
 import Contact from "@/components/contact";
 import { motion } from "framer-motion";
 
