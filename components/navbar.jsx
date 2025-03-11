@@ -11,7 +11,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = ["home", "about", "education", "projects", "contact"];
       let currentSection = "home";
 
       sections.forEach((section) => {
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
-          {["Home", "About", "Projects", "Contact"].map((item, index) => (
+          {["Home", "About", "Education", "Projects", "Contact"].map((item, index) => (
             <motion.li
               key={index}
               whileHover={{ scale: 1.1 }}
@@ -81,7 +81,7 @@ const Navbar = () => {
           className="md:hidden bg-white shadow-md rounded-md p-4 mt-2"
         >
           <ul className="flex flex-col space-y-4">
-            {["Home", "About", "Projects", "Contact"].map((item, index) => (
+            {["Home", "About", "Education", "Projects", "Contact"].map((item, index) => (
               <li key={index}>
                 <Link
                   href={`#${item.toLowerCase()}`}

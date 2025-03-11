@@ -7,6 +7,23 @@ import Navbar from "@/components/navbar";
 import Contact from "@/components/contact";
 import { motion } from "framer-motion";
 
+const educationData = [
+  {
+    year: "2016 - 2019",
+    title: "SMP Negeri 22 Surabaya",
+    description: "Menempuh pendidikan menengah dengan fokus pada ilmu pengetahuan alam dan matematika."
+  },
+  {
+    year: "2019 - 2022",
+    title: "SMA Negeri 15 Surabaya - IPA",
+    description: "Menempuh pendidikan menengah dengan fokus pada ilmu pengetahuan alam dan matematika."
+  },
+  {
+    year: "2022 - Sekarang",
+    title: "UIN Sunan Ampel Surabaya - Pendidikan Matematika",
+    description: "Sedang menempuh pendidikan tinggi dengan konsentrasi pada metode pengajaran matematika berbasis teknologi."
+  }
+];
 
 const projects = [
   {
@@ -95,6 +112,33 @@ export default function Home() {
           amazing together!
         </motion.p>
       </motion.section>
+
+      <motion.section id="education" className="min-h-screen bg-gray-100 py-12" 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}>
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 mt-24">Education</h2>
+        <div className="relative border-l-4 border-blue-600 pl-6">
+          {educationData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+              className="mb-8"
+            >
+              <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-2.5 top-2.5"></div>
+              <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+              <span className="text-gray-600 text-sm">{item.year}</span>
+              <p className="text-gray-700 mt-2">{item.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
+
 
       <section id="projects" className="py-20 bg-gray-100">
       <div className="text-center mb-12">
